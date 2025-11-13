@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { Suspense } from "react";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
@@ -48,7 +49,9 @@ export default function RootLayout({
           <body
             className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
           >
-            <NavBar />
+            <Suspense fallback={null}>
+              <NavBar />
+            </Suspense>
             <main>
               {children}
             </main>

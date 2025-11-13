@@ -40,7 +40,7 @@ export default function NavBar() {
     }
 
     const currentMenu =
-    pathname?.startsWith("/proyectos") ? projectMenu : defaultMenu;
+        pathname?.startsWith("/proyectos") ? projectMenu : defaultMenu;
 
     return (
         <>
