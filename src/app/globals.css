@@ -59,19 +59,19 @@ article {
     margin-top: 5px;
 }
 
+.skillItem {
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
 
 
 /* Desktop Styles */
 
 @media (min-width: 1024px) {
-    .skillItem {
-        padding: 5px 15px;
-        border-radius: 10px;
-        border: 1px solid #e1e1e1;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-
     .skillItem:hover {
         border-color: #a855f7;
     }

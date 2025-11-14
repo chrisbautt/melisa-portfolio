@@ -6,12 +6,13 @@ import CardProject from "@/components/CardProject";
 import CardService from "@/components/CardServices";
 import CardSkills from "@/components/CardSkills";
 import CardTestimonials from "@/components/CardTestimonials";
-import CTA from "@/components/CTA";
 import Form from "@/components/Form";
 import Metrics from "@/components/Metrics";
 import Image from "next/image";
 import Link from "next/link";
 import projectsData from "@/data/projects.js";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import ArrowScrollDown from "@/components/ArrowScrollDown";
 
 export default function Home() {
   const projects = projectsData.projects;
@@ -29,7 +30,7 @@ export default function Home() {
           <Link href="#proyectos" className="py-2 px-4 rounded-[10px] border border-[#a855f7] bg-[#a855f7] md:hover:bg-[#a855f7]/90 text-white cursor-pointer">Ver mí Trabajo</Link>
           <Link href="#contacto" className="py-2 px-4 rounded-[10px] border border-[#e1e1e1] md:hover:border-[#a855f7] md:hover:text-[#a855f7] cursor-pointer transform transition-all duration-300">Contáctame</Link>
         </div>
-        <Image src="/icons/keyboard_arrow_down.svg" alt="" width={40} height={40} className="" />
+        <ArrowScrollDown />
       </section>
 
       <section id="sobre-mi" className="section max-w-6xl mx-auto">
@@ -120,11 +121,29 @@ export default function Home() {
           <h2 className="heading">Testimonios</h2>
           <p className="text-[#626269]">Lo que dicen mis compañeros y clientes sobre mi trabajo</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <CardTestimonials Testimonial="Excelente profesional y compañera de equipo. 100% recomendada." Author="Ana Laura Z." Position="Tester QA Manual | Jr. Software Engineer" />
-          <CardTestimonials Testimonial="La investigación de usuarios realizada por Meli nos proporcionó insights valiosos que transformaron nuestro proyecto. Su enfoque centrado en el usuario es excepcional." Author="María Tellez" Position="UX/UI Designer" />
-          <CardTestimonials Testimonial="Trabajar con Meli fue una experiencia fantástica. Su creatividad y habilidades de diseño llevaron mi sitio web al siguiente nivel." Author="Chris Bauttierre" Position="Web Developer" />
-        </div>
+        <TestimonialsCarousel speed={45}>
+          <div className="min-w-[100%] md:min-w-[33%]">
+            <CardTestimonials
+              Testimonial="Excelente profesional y compañera de equipo. 100% recomendada."
+              Author="Ana Laura Z."
+              Position="Tester QA Manual | Jr. Software Engineer"
+            />
+          </div>
+          <div className="min-w-[100%] md:min-w-[33%]">
+            <CardTestimonials
+              Testimonial="La investigación de usuarios realizada por Meli nos proporcionó insights valiosos que transformaron nuestro proyecto. Su enfoque centrado en el usuario es excepcional."
+              Author="María Tellez"
+              Position="UX/UI Designer"
+            />
+          </div>
+          <div className="min-w-[100%] md:min-w-[33%]">
+            <CardTestimonials
+              Testimonial="Trabajar con Meli fue una experiencia fantástica. Su creatividad y habilidades de diseño llevaron mi sitio web al siguiente nivel."
+              Author="Chris Bauttierre"
+              Position="Web Developer"
+            />
+          </div>
+        </TestimonialsCarousel>
       </section>
 
       <section id="faq" className="section max-w-6xl mx-auto">
@@ -154,8 +173,6 @@ export default function Home() {
           </CardLink>
         </div>
       </section>
-
-      <CTA />
     </>
   );
 }

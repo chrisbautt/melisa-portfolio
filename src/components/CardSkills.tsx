@@ -25,7 +25,7 @@ export default function CardSkills({ skillName, skills }: CardSkillsProps) {
                     <Image src={isOpen ? "/icons/keyboard_arrow_up.svg" : "/icons/keyboard_arrow_down.svg"} alt="mostrar detalles" width={40} height={40} className="cursor-pointer" />
                 </summary>
                 <div className="p-4 font-bold">
-                    <ul className="flex flex-wrap gap-8 justify-start items-center">
+                    <ul className="flex flex-wrap gap-4 md:gap-8 justify-start items-center">
                         {skills.map((skill, index) => (
                             <li key={index} className="skillItem">{skill}</li>
                         ))}

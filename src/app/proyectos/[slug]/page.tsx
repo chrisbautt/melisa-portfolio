@@ -1,6 +1,5 @@
 import projectsData from "@/data/projects";
 import Image from "next/image";
-import CTA from "@/components/CTA";
 import Link from "next/link";
 
 export async function generateStaticParams() {
@@ -60,8 +59,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </section>
-
-      <CTA />
     </>
   );
 }
