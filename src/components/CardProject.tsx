@@ -18,7 +18,7 @@ export default function CardProject({ slug, urlImage, typeProject, projectTitle,
             </div>
             <div className="flex flex-col gap-3 py-6 px-4">
                 <div className="flex flex-col gap-2 mb-[10px]">
-                    <span className="text-sm text-[#a855f7] uppercase">{typeProject}</span>
+                    <span className="text-sm text-[#a855f7] uppercase font-light">{typeProject}</span>
                     <ul className="flex items-center gap-2 text-xs flex-wrap">
                         {projectTechnologies?.map((tech, index) => (
                             <li key={index} className="py-1 px-4 border border-[#e1e1e1] md:hover:border-[#a855f7] rounded-full cursor-default">{tech}</li>

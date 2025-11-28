@@ -44,15 +44,11 @@ article {
 
 /* Specific Styles */
 
-.navBarLink:hover {
-    color: #a855f7;
-}
-
-.timeLine-gradient {
+.timeLineGradient {
     background-image: linear-gradient(180deg, rgba(168, 85, 247, 1) 0%, rgba(168, 85, 247, 0));
 }
 
-.validation-error {
+.validationError {
     color: #ff0000;
     font-size: 0.875rem;
     font-weight: normal;
@@ -64,7 +60,8 @@ article {
     border-radius: 10px;
     border: 1px solid #e1e1e1;
     transition: all 0.3s ease;
-    cursor: pointer;
+    cursor: default;
+    white-space: nowrap;
 }
 
 

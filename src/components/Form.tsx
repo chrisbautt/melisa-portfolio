@@ -15,28 +15,28 @@ export default function Form() {
                         Nombre
                         <input type="text" id="name" name="name" placeholder="Nombre Completo" className="py-2 px-4 border border-[#e1e1e1] rounded-[8px] bg-[#eeeef0] placeholder:text-[#999999] font-normal" />
                     </label>
-                    <ValidationError prefix="Name" field="name" errors={state.errors} className='validation-error' />
+                    <ValidationError prefix="Name" field="name" errors={state.errors} className='validationError' />
                 </div>
                 <div>
                     <label htmlFor="email">
                         Correo Electrónico
                         <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" className="py-2 px-4 border border-[#e1e1e1] rounded-[8px] bg-[#eeeef0] placeholder:text-[#999999] font-normal" />
                     </label>
-                    <ValidationError prefix="Email" field="email" errors={state.errors} className='validation-error' />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} className='validationError' />
                 </div>
                 <div>
                     <label htmlFor="subject">
                         Asunto
                         <input type="text" id="subject" name="subject" placeholder="Asunto del Proyecto" className="py-2 px-4 border border-[#e1e1e1] rounded-[8px] bg-[#eeeef0] placeholder:text-[#999999] font-normal" />
                     </label>
-                    <ValidationError prefix="Subject" field="subject" errors={state.errors} className='validation-error' />
+                    <ValidationError prefix="Subject" field="subject" errors={state.errors} className='validationError' />
                 </div>
                 <div>
                     <label htmlFor="message">
                         Mensaje
                         <textarea id="message" name="message" placeholder="Cuéntame más sobre tu proyecto" className="min-h-[125px] py-2 px-4 border border-[#e1e1e1] rounded-[8px] bg-[#eeeef0] placeholder:text-[#999999] font-normal"></textarea>
                     </label>
-                    <ValidationError prefix="Message" field="message" errors={state.errors} className='validation-error' />
+                    <ValidationError prefix="Message" field="message" errors={state.errors} className='validationError' />
                 </div>
                 <input type="submit" value='Enviar Mensaje' className="py-2 px-4 rounded-[8px] border border-[#a855f7] bg-[#a855f7] text-white cursor-pointer md:hover:bg-[#a855f7]/90" />
             </form>

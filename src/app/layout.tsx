@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://melisabdn.netlify.app"),
+  metadataBase: new URL("https://melisabdn.vercel.app/"),
   title: "Melisa B. Díaz - UX/UI Designer & Frontend Developer Jr",
   description: "Diseñadora UX/UI especializada en diseños modernos y minimalistas, enfocado en la investigación de usuarios e innovación digital con un diseño centrado en el usuario.",
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Melisa B. Díaz Portfolio",
     images: [
       {
-        url: "/open_graph/open-graph-image.jpeg",
+        url: "/open-graph/open-graph-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Melisa B. Díaz",

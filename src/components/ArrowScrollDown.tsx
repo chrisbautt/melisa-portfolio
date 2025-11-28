@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ArrowScrollDown() {
   return (
     <motion.div
-      animate={{ y: [0, 10, 0] }}
+      animate={{ y: [0, 15, 0] }}
       transition={{
         duration: 1.6,
         repeat: Infinity,
@@ -14,7 +14,7 @@ export default function ArrowScrollDown() {
       className="flex justify-center"
     >
       <Image
-        src="/icons/keyboard_arrow_down.svg"
+        src="/icons/keyboard-arrow-down.svg"
         alt=""
         width={40}
         height={40}

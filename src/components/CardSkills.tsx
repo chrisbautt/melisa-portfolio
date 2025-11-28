@@ -20,9 +20,9 @@ export default function CardSkills({ skillName, skills }: CardSkillsProps) {
                 <summary className="flex justify-between items-center p-4 border border-[#e1e1e1] md:hover:border-[#a855f7] rounded-[15px] transform transition-all duration-300 cursor-pointer shadow-[5px_5px_10px] shadow-[#eeeeee]"  onClick={toggleDetails}>
                     <div className="flex items-center gap-4">
                         <div className="w-[5px] h-[35px] bg-[#a855f7] rounded-full"></div>
-                        <div><span className="font-bold text-[#a855f7] text-lg">{skillName}</span></div>
+                        <div><span className="text-[#a855f7] text-lg">{skillName}</span></div>
                     </div>
-                    <Image src={isOpen ? "/icons/keyboard_arrow_up.svg" : "/icons/keyboard_arrow_down.svg"} alt="mostrar detalles" width={40} height={40} className="cursor-pointer" />
+                    <Image src={isOpen ? "/icons/keyboard-arrow-up.svg" : "/icons/keyboard-arrow-down.svg"} alt="mostrar detalles" width={40} height={40} className="cursor-pointer" />
                 </summary>
                 <div className="p-4 font-bold">
                     <ul className="flex flex-wrap gap-4 md:gap-8 justify-start items-center">

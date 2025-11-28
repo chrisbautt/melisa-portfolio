@@ -26,10 +26,10 @@ export default function TestimonialsCarousel({ children, speed = 50 }: Readonly<
   });
 
   return (
-    <div className="overflow-hidden relative w-full py-6">
+    <div className="max-w-[2500px] mx-auto overflow-hidden relative w-full py-6">
       <motion.div
         ref={containerRef}
-        className="flex gap-6"
+        className="flex gap-6 px-2"
         style={{ x: baseX }}
       >
         {children}
