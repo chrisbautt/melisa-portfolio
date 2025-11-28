@@ -32,6 +32,8 @@ export default function FileDownloadSection({ files }: FileDownloadSectionProps)
             key={index}
             href={file.url}
             download
+            target="_blank"
+            rel="noopener noreferrer"
             className="py-1 px-4 border border-[#e1e1e1] rounded-full cursor-pointer transition-all duration-300 md:hover:border-[#a855f7] md:hover:text-[#a855f7]"
           >
             Descargar {isMobile ? file.movilFileName : file.desktopFileName}

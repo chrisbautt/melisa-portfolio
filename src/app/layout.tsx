@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/next"
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
@@ -56,6 +57,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <Analytics />
           </body>
       </html>
   );

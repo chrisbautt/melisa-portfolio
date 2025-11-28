@@ -16,9 +16,9 @@ const projectsData = {
       ],
       "files": [
         {
-          "movilFileName": "case_study.txt",
-          "desktopFileName": "servimatch_caso_de_estudio.txt",
-          "url": "/projects/servimatch_caso_de_estudio.txt"
+          "movilFileName": "case_study.docx",
+          "desktopFileName": "servimatch_case_study.docx",
+          "url": "https://docs.google.com/document/d/1YzucmTrh3BnjSULsTGYk6sAybFkd-8PbsucIamX6pKM/export?format=docx"
         }
       ],
       "image": {

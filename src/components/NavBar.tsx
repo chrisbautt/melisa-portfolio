@@ -16,21 +16,21 @@ export default function NavBar() {
     const { pathname } = useCurrentPath() || {};
 
     const defaultMenu: NavItem[] = [
-      { label: "Sobre mí", href: "#sobre-mi" },
-      { label: "Proyectos", href: "#proyectos" },
-      { label: "Experiencia", href: "#experiencia" },
-      { label: "Servicios", href: "#servicios" },
-      { label: "FAQ", href: "#faq" },
-      { label: "Contacto", href: "#contacto" },
+        { label: "Sobre mí", href: "#sobre-mi" },
+        { label: "Proyectos", href: "#proyectos" },
+        { label: "Experiencia", href: "#experiencia" },
+        { label: "Servicios", href: "#servicios" },
+        { label: "FAQ", href: "#faq" },
+        { label: "Contacto", href: "#contacto" },
     ];
 
     const projectMenu: NavItem[] = [
-      { label: "Sobre mí", href: "/#sobre-mi" },
-      { label: "Proyectos", href: "/#proyectos" },
-      { label: "Experiencia", href: "/#experiencia" },
-      { label: "Servicios", href: "/#servicios" },
-      { label: "FAQ", href: "/#faq" },
-      { label: "Contacto", href: "/#contacto" },
+        { label: "Sobre mí", href: "/#sobre-mi" },
+        { label: "Proyectos", href: "/#proyectos" },
+        { label: "Experiencia", href: "/#experiencia" },
+        { label: "Servicios", href: "/#servicios" },
+        { label: "FAQ", href: "/#faq" },
+        { label: "Contacto", href: "/#contacto" },
     ];
 
     const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ export default function NavBar() {
                         <Image src={isOpen ? "/icons/close.svg" : "/icons/menu.svg"} alt="menu icon" width={30} height={30} />
                     </button>
                 </div>
-                
+
                 {/* Movile navBar */}
                 <ul className={`${isOpen ? 'relative' : 'hidden'} flex flex-col justify-center items-center text-center gap-3 p-2`}>
                     {currentMenu.map((item, index) => (
@@ -60,7 +60,7 @@ export default function NavBar() {
                 </ul>
 
                 {/* Desktop navBar */}
-                <Link href="#home" className="hidden md:inline-block text-[#a855f7] text-xl uppercase"><span className="text-shadow-[0px_0px_2px] shadow-[#a855ee]">UX/UI</span> Designer</Link>
+                <Link href="/" className="hidden md:inline-block text-[#a855f7] text-xl uppercase"><span className="text-shadow-[0px_0px_2px] shadow-[#a855ee]">UX/UI</span> Designer</Link>
                 <ul className="hidden md:flex justify-end items-center gap-8">
                     {currentMenu.map((item, index) => (
                         <li
