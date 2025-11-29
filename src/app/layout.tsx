@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
@@ -46,19 +47,21 @@ export default function RootLayout({
 }>) {
 
   return (
-      <html lang="es">
-          <body
-            className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
-          >
-            <Suspense fallback={null}>
-              <NavBar />
-            </Suspense>
-            <main>
-              {children}
-            </main>
-            <Footer />
-            <Analytics />
-          </body>
-      </html>
+    <html lang="es">
+      <body
+        className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+      >
+        <Suspense fallback={null}>
+          <NavBar />
+        </Suspense>
+        <main>
+          {children}
+        </main>
+        <Footer />
+
+        <Analytics />
+        <SpeedInsights />
+      </body>
+    </html>
   );
 }
