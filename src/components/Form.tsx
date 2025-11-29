@@ -38,7 +38,7 @@ export default function Form() {
                     </label>
                     <ValidationError prefix="Message" field="message" errors={state.errors} className='validationError' />
                 </div>
-                <input type="submit" value='Enviar Mensaje' className="py-2 px-4 rounded-[8px] border border-[#a855f7] bg-[#a855f7] text-white cursor-pointer md:hover:bg-[#a855f7]/90" />
+                <input type="submit" value={state.submitting ? "Enviando..." : "Enviar Mensaje"} className="py-2 px-4 rounded-[8px] border border-[#a855f7] bg-[#a855f7] text-white cursor-pointer md:hover:bg-[#a855f7]/90" />
             </form>
         </>
     );
