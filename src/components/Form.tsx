@@ -1,5 +1,5 @@
 'use client';
-import {useForm, ValidationError} from '@formspree/react';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Form() {
     const [state, handleSubmit] = useForm("xovyaqly");

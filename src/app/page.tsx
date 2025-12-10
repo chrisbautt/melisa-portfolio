@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <section id="home" className="min-h-[100vh] flex flex-col justify-center items-center text-center gap-6 pt-15 md:pt-10 md:pb-4 px-4">
         <h1 className="text-4xl md:text-5xl md:text-7xl">Diseñadora <span className="text-[#a855f7] text-shadow-[0px_0px_10px] shadow-[#a855f7]">UX/UI</span> Creativa</h1>
-        <p className="text-xl md:text-2xl text-[#626269] max-w-[750px] font-light">Transformo ideas en experiencias digitales hermosas y funcionales. Especializada en diseños creativos, investigación de usuarios e innovación digital.</p>
+        <h2 className="text-xl md:text-2xl text-[#626269] max-w-[750px] font-light">Transformo ideas en experiencias digitales hermosas y funcionales. Especializada en diseños creativos, investigación de usuarios e innovación digital.</h2>
         <div className="w-full max-w-3xl mt-4">
           <TestimonialsCarousel speed={30}>
             <Skills prop="Diseño de Sitios Web" />
@@ -51,7 +51,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <h2 className="text-2xl font-bold mb-4">¿Quién Soy Yo?</h2>
+            <h3 className="text-2xl font-bold mb-4">¿Quién Soy Yo?</h3>
             <p className="paraphrase">Soy Melisa Belén Díaz, Diseñadora UX/UI y Desarrolladora Web Frontend Jr. con una larga carrera de formación universitaria y autodidacta, capaz de entregar resultados profesionales y personalizados, mejorando la retención y experiencia de usuario en cada uno de mis trabajos.</p>
             <p className="paraphrase">Mi formación académica abarca desde una Tecnicatura Universitaria en Programación (Universidad Provincial del Sudoeste) combinada con cursos de UX/UI con foco en accesibilidad, diseño centrado en el usuario y prototipado del alta y baja fidelidad con herramientas como Figma y Adobe XD, junto con otras herramientas de diseño y programación.</p>
             <p className="paraphrase">A través de mis años de formación he ido adquiriendo grandes conocimientos y habilidades, junto con algunos certificados que refuerzan mis conocimientos, todo esto me permite trabajar en diferentes entornos de trabajo y proyectos, cuidando cada detalle profesional, y poniendo un enfoque en la experiencia de usuario final, la accesibilidad y el diseño inclusivo.</p>
@@ -59,7 +59,7 @@ export default function Home() {
         </article>
         <hr className="my-[50px] border-[#eeeeee]" />
         <article>
-          <h2 className="text-2xl font-bold mb-5">Habilidades y Expertise</h2>
+          <h3 className="text-2xl font-bold mb-5">Habilidades y Expertise</h3>
           <div className="flex flex-col gap-6">
             <CardSkills skillName="Desarrollo Web" skills={["HTML5", "CSS", "JavaScript", "ReactJS", "MySQL", "Python", "Flask", "C#"]} />
             <CardSkills skillName="Diseño UX/UI" skills={["Figma", "Adobe XD", "Canva"]} />
@@ -74,18 +74,18 @@ export default function Home() {
           <h2 className="heading">Proyectos Destacados</h2>
           <p className="text-[#626269]">Una selección de proyectos donde la creatividad, la estrategia y la experiencia se unen para crear productos memorables.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map(project => (
-              <CardProject 
-                key={project.id}
-                slug={project.slug}
-                urlImage={project.image.url} 
-                typeProject={project.type} 
-                projectTitle={project.title} 
-                projectDescription={project.description} 
-                projectTechnologies={project.technologies} 
-              />
-            ))}
+            <CardProject
+              key={project.id}
+              slug={project.slug}
+              urlImage={project.image.url}
+              typeProject={project.type}
+              projectTitle={project.title}
+              projectDescription={project.shortDescription}
+              projectTechnologies={project.technologies}
+            />
+          ))}
         </div>
       </section>
 
@@ -174,10 +174,10 @@ export default function Home() {
         </div>
         <Form />
         <div className="flex justify-center items-center py-12 gap-6">
-          <CardLink url="https://www.linkedin.com/in/melisa-belen-diaz-nieto/">
+          <CardLink url="https://www.linkedin.com/in/melisa-belen-diaz-nieto/" ariaLabel="Ir a mi perfil de LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-linkedin" data-loc="client/src/pages/Home.tsx:542"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           </CardLink>
-          <CardLink url="mailto:melisabdiaz.it@gmail.com">
+          <CardLink url="mailto:melisabdiaz.it@gmail.com" ariaLabel="Enviar un correo electrónico">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail" data-loc="client/src/pages/Home.tsx:545"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
           </CardLink>
         </div>

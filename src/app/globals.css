@@ -64,6 +64,12 @@ article {
     white-space: nowrap;
 }
 
+.projectSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 
 
 /* Desktop Styles */

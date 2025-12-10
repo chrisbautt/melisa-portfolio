@@ -34,7 +34,6 @@ export default function NavBar() {
     ];
 
     const [isOpen, setIsOpen] = useState(false);
-
     const handleOpenNavBar = () => {
         setIsOpen(!isOpen);
     }
@@ -44,11 +43,11 @@ export default function NavBar() {
 
     return (
         <>
-            <header className='bg-[rgba(255,255,255,0.7)] md:bg-[rgba(255,255,255,0.6)] backdrop-blur-lg shadow-[5px_5px_10px] shadow-[#eeeeee] fixed z-100 top-4 md:top-6 lg:top-8 left-0 right-0 border border-[#e1e1e1] w-[90%] max-w-6xl mx-auto rounded-[15px] py-3 md:py-4 px-6 flex flex-col md:flex-row justify-between items-center gap-6 font-medium'>
+            <header className='bg-[rgba(255,255,255,0.7)] md:bg-[rgba(255,255,255,0.6)] backdrop-blur-lg shadow-[5px_5px_10px] shadow-[#eeeeee] fixed z-100 top-4 md:top-6 lg:top-8 left-0 right-0 border border-[#e1e1e1] w-[90%] max-w-6xl mx-auto rounded-[15px] py-3 md:py-4 px-6 flex flex-col md:flex-row justify-between md:justify-center lg:justify-between items-center gap-6 font-medium'>
                 <div className="w-full flex md:hidden justify-between items-center">
-                    <Link href="/" className="text-[#a855f7] text-xl uppercase"><span className="text-shadow-[0px_0px_2px] shadow-[#a855ee]">UX/UI</span> Designer</Link>
+                    <Link href={pathname.startsWith("/proyectos") ? "/" : "#home"} className="text-[#a855f7] text-xl font-light uppercase"><span className="text-shadow-[0px_0px_2px] shadow-[#a855ee]">UX/UI</span> Designer</Link>
                     <button className="cursor-pointer" onClick={handleOpenNavBar}>
-                        <Image src={isOpen ? "/icons/close.svg" : "/icons/menu.svg"} alt="menu icon" width={30} height={30} />
+                        <Image src={isOpen ? "/icons/close.svg" : "/icons/menu.svg"} alt="Menú" width={30} height={30} />
                     </button>
                 </div>
 
@@ -60,7 +59,7 @@ export default function NavBar() {
                 </ul>
 
                 {/* Desktop navBar */}
-                <Link href="/" className="hidden md:inline-block text-[#a855f7] text-xl uppercase"><span className="text-shadow-[0px_0px_2px] shadow-[#a855ee]">UX/UI</span> Designer</Link>
+                <Link href={pathname.startsWith("/proyectos") ? "/" : "#home"} className="hidden lg:inline-block text-[#a855f7] text-xl font-light uppercase"><span className="text-shadow-[0px_0px_2px] shadow-[#a855ee]">UX/UI</span> Designer</Link>
                 <ul className="hidden md:flex justify-end items-center gap-8">
                     {currentMenu.map((item, index) => (
                         <li

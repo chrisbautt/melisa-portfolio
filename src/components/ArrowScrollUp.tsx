@@ -14,10 +14,10 @@ export default function ArrowScrollUp() {
             }}
             className="flex justify-center"
         >
-            <Link href="#home">
+            <Link href="#home" aria-label="Regresar arriba">
                 <Image
                     src="icons/keyboard-arrow-up.svg"
-                    alt=""
+                    alt="Regresar arriba"
                     width={50}
                     height={50}
                     className="cursor-pointer w-[40px] h-[40px] md:w-[45px] md:h-[45px]"

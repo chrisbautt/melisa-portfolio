@@ -2,11 +2,51 @@ import FileDownloadSection from "@/components/FileDownloadSection";
 import projectsData from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   return projectsData.projects.map((project) => ({
     slug: project.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }>; }): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projectsData.projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return {
+      title: "Proyecto No Encontrado",
+      description: "El proyecto que buscas no existe o ha sido removido de la plataforma.",
+    };
+  }
+
+  return {
+    title: `${project.seo.title}`,
+    description: project.seo.description,
+    keywords: [...project.technologies, project.type, project.title, project.seo.keywords].join(", "),
+    authors: [{ name: "Melisa Belén Díaz Nieto" }],
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      type: "website",
+      url: `https://melisabdn.vercel.app/proyectos/${project.slug}`,
+      images: [
+        {
+          url: `/projects/${project.image.url}`,
+          width: 800,
+          height: 600,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.description,
+      images: [`/projects/${project.image.url}`],
+    },
+  };
 }
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }>; }) {
@@ -32,7 +72,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   return (
     <>
       <section id="#home" className="py-[150px] px-[25px] max-w-4xl mx-auto">
-        <div className="mb-2">
+        <div className="mb-4">
           <Link href="/#proyectos" className="text-sm text-[#a855f7] md:hover:text-[#a855f7]/90 transition-all duration-300">&larr; Volver a Proyectos</Link>
         </div>
         <div>
@@ -45,13 +85,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           />
         </div>
 
-        <div className="flex flex-col gap-10 my-6">
-          <div className="flex flex-col gap-2">
+        <article className="flex flex-col gap-10 my-6">
+          <div className="projectSection">
+            <span className="text-md text-[#a855f7] uppercase font-light">{project?.type}</span>
             <h1 className="text-3xl uppercase">{project?.title}</h1>
             <p className="text-[#626269]">{project?.description}</p>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="projectSection">
             <h2 className="text-2xl">Tecnologías Utilizadas</h2>
             <ul className="text-sm flex items-center gap-2 flex-wrap">
               {project?.technologies.map((tech, index) => (
@@ -62,10 +103,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </ul>
           </div>
 
+          <div>
+            <h2 className="text-2xl">Mí rol</h2>
+            <p className="text-[#626269]">{project?.rol}</p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl">Objetivos</h2>
+            <p className="text-[#626269]">{project?.objectives}</p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl">Resultados</h2>
+            <p className="text-[#626269]">{project?.results}</p>
+          </div>
+
           {project?.files && project.files.length > 0 && (
             <FileDownloadSection files={project.files} />
           )}
-        </div>
+        </article>
       </section>
     </>
   );

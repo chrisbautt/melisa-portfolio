@@ -12,9 +12,9 @@ interface CardProjectProps {
 
 export default function CardProject({ slug, urlImage, typeProject, projectTitle, projectDescription, projectTechnologies }: CardProjectProps) {
     return (
-        <Link href={`/proyectos/${slug}`} className="rounded-[15px] border border-[#e1e1e1] md:hover:border-[#a855f7] overflow-hidden shadow-[5px_5px_10px] shadow-[#eeeeee]">
-            <div>
-                <Image src={`/projects/${urlImage}`} alt={projectTitle} width={400} height={300} className="w-full" />
+        <Link href={`/proyectos/${slug}`} className="grid grid-cols-1 grid-rows-2 rounded-[15px] border border-[#e1e1e1] md:hover:border-[#a855f7] overflow-hidden shadow-[5px_5px_10px] shadow-[#eeeeee] md:hover:shadow-[#a855f7]/10 md:hover:scale-103 transition-all duration-300">
+            <div className="">
+                <Image src={`/projects/${urlImage}`} alt={projectTitle} width={400} height={300} className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col gap-3 py-6 px-4">
                 <div className="flex flex-col gap-2 mb-[10px]">

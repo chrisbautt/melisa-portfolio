@@ -20,12 +20,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://melisabdn.vercel.app/"),
   title: "Melisa B. Díaz - UX/UI Designer & Frontend Developer Jr",
-  description: "Diseñadora UX/UI especializada en diseños modernos y minimalistas, enfocado en la investigación de usuarios e innovación digital con un diseño centrado en el usuario.",
-
+  description: "Diseñadora UX/UI especializada en diseños modernos y minimalistas, enfocado en investigación de usuarios e innovación digital con un diseño centrado en el usuario.",
+  keywords: ["Melisa B. Díaz", "Melisa Belen Diaz Nieto", "UX Designer", "UI Designer", "Frontend Developer", "Diseñadora UX", "Diseñadora UI", "Desarrolladora Frontend", "Portafolio", "Portfolio", "Melisa Portfolio", "Melisa B. Díaz Portfolio"],
+  authors: [{ name: "Melisa Belén Díaz Nieto" }],
   openGraph: {
     title: "Melisa B. Díaz - UX/UI Designer & Frontend Developer Jr",
-    description: "Diseñadora UX/UI especializada en diseños modernos y minimalistas, enfocado en la investigación de usuarios e innovación digital con un diseño centrado en el usuario.",
-    url: "https://melisabdiaz.com",
+    description: "Diseñadora UX/UI especializada en diseños modernos y minimalistas, enfocado en investigación de usuarios e innovación digital con un diseño centrado en el usuario.",
+    url: "https://melisabdn.vercel.app",
     siteName: "Melisa B. Díaz Portfolio",
     images: [
       {
@@ -37,6 +38,12 @@ export const metadata: Metadata = {
     ],
     locale: "es_ES",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Melisa B. Díaz - UX/UI Designer & Frontend Developer Jr",
+    description: "Diseñadora UX/UI especializada en diseños modernos y minimalistas, enfocado en investigación de usuarios e innovación digital con un diseño centrado en el usuario.",
+    images: ["/open-graph/open-graph-image.jpeg"],
   },
 };
 

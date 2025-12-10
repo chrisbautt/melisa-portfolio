@@ -8,7 +8,7 @@ export default function Metrics({ metricCount, metricLabel }: MetricsProps) {
         <>
             <div>
                 <span className="text-3xl text-[#a855f7] font-normal">+{metricCount}</span>
-                <p className="text-[#626269] font-light">{metricLabel}</p>
+                <span className="text-[#626269] font-light">{metricLabel}</span>
             </div>
         </>
     );
